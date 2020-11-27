@@ -14,7 +14,8 @@ router.post('/delete', userCtrl.deleteuser);
 router.get('/',userCtrl.home)
 
 router.post('/create',categorieProduitCtrl.create)
-router.post('/createProduit',produitCtrl.createProduit)
+router.post('/createProduct',produitCtrl.createProduit)
+
 // router.post('/createPanier',panierCtrl.createPanier)
 
 

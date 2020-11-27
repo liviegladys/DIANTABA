@@ -2,10 +2,6 @@ const mongoose = require('mongoose'); //faire appel à mongoose
 const bcrypt= require('bcrypt');
 //const uniqueValidator = require('mongoose-unique-validator');
 
-
-
-
-
 const userSchema = mongoose.Schema({// schema de données
     Nom: { type: String, required: true },
     Prenom: { type: String, required: true },
@@ -14,7 +10,6 @@ const userSchema = mongoose.Schema({// schema de données
     Statut:{type:String,enum:['particulier','professionnel']},
     
 });
-
 
 userSchema.pre('save',async function(next){
     try{
@@ -33,8 +28,6 @@ userSchema.pre('save',async function(next){
         next(error);
     }
 })
-
 //userSchema.plugin(uniqueValidator);
-
 module.exports = mongoose.model('user_model', userSchema);// exporter le schema de donnée dans mongoose
 

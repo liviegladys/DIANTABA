@@ -32,17 +32,17 @@ module.exports = {
         })
     },
     
-    modifycategorieProduit (req, res, next) {
-        const categorieProduitObject = req.file ?
-        {
-          ...JSON.parse(req.body.categorieProduit),
-          imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
-        } : { ...req.body };
+    // modifycategorieProduit (req, res, next) {
+    //     const categorieProduitObject = req.file ?
+    //     {
+    //       ...JSON.parse(req.body.categorieProduit),
+    //       imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
+    //     } : { ...req.body };
     
-          Cat.updateOne({ _id: req.params.id }, { ...categorieProduitObject, _id: req.params.id })
-              .then(() => res.status(200).json({ message: 'categorie modifié !'}))
-              .catch(error => res.status(400).json({ error }));
-          },
+    //       Cat.updateOne({ _id: req.params.id }, { ...categorieProduitObject, _id: req.params.id })
+    //           .then(() => res.status(200).json({ message: 'categorie modifié !'}))
+    //           .catch(error => res.status(400).json({ error }));
+    //       },
     
           deletecategorieProduit  (req, res, next)  {
             Cat.findOne({ _id: req.params.id })

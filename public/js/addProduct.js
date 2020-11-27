@@ -1,0 +1,1 @@
+//'api/createProduct' c'est l url vers laquelle yao va envoyer tout le body du form via fetch

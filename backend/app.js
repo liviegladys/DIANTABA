@@ -4,9 +4,11 @@ const mongoose = require('mongoose');
 const app = express();
 const path = require('path');
 const fs = require('fs');
-
+const produit_model=require('../backend/Models/produit_model')
+app.use(express.static("public"))
 
 const routRoutes=require('./routes/rout');
+const { Console } = require('console');
 
 mongoose.connect('mongodb+srv://DIANTABA:simplon2020@cluster0.5wnmq.mongodb.net/DIANTABA?retryWrites=true&w=majority',// connexion à la base de donnée
   { useNewUrlParser: true,
@@ -45,6 +47,49 @@ app.use((req, res, next) => {
 
         app.get('/profile', function(req, res) {
           res.render('pages/profile')}); 
+
+          app.get('/product', async function(req, res) {
+            
+           //avant le rendu faire la connexion avec la BDD
+
+           //requete pour selectionner tous les produits ET LA STOCKE DANS UNE VARIABLE
+
+           const products= await produit_model.find({}).exec();
+           console.log(products)
+
+// .then(() => res.sendStatus(201).render("page/product",{ message: 'voici tous vos produits' }))
+// .catch(error => res.sendStatus(400).json({ error }));
+
+           //gestion des erreurs...
+
+           //stocker le resultat de la requete dans une variable
+          //  const products=[
+          //    {
+          //     ProduitTitre:"pomme",
+          //     ProduitPic:"pomme.jpeg",
+          //     ProduitDescrip:"bonne pour le cerveau",
+          //     ProduitRegion:"centre",
+          //     produitPrix: 4,
+          //     categorie: "5fbb8d9de158c52e2013bdcd"
+          //    },
+          //    {
+          //     ProduitTitre:"poire",
+          //     ProduitPic:"poire.jpeg",
+          //     ProduitDescrip:"bon pour la peau",
+          //     ProduitRegion:"haut de france",
+          //     ProduitPrix: 9,
+          //     categorie: "5fbb8d9de158c52e2013bdcd"
+          //    }
+          //  ]
+           // passer cette variable dans le render 
+            
+            
+            
+            res.render('pages/product',{
+              products:products,// passer une variable dansle rendu de page
+              message:"coucou"
+             })
+            }); 
 
 
 

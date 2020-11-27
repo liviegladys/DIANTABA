@@ -18,7 +18,10 @@ const Produit = require('../Models/produit_model');
             produit_model.save()
             .then(() => res.sendStatus(201).json({ message: 'produit créé !' }))
             .catch(error => res.sendStatus(400).json({ error }));
-            }
+            },
+
+            
+
         
         };
 

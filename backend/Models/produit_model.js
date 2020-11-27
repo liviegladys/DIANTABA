@@ -9,7 +9,7 @@ const ProduitSchema = mongoose.Schema({
     ProduitDescrip: { type: String, },
     ProduitRegion: { type: String, },
     produitPrix: { type: Number },
-    categorie: [{ type: mongoose.Schema.Types.ObjectId, ref: 'cat' }],
+    categorie: { type: mongoose.Schema.Types.ObjectId, ref: 'cat' },
 
    
 
