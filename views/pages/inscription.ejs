@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+      <head>
+          <link rel="stylesheet" href="index.css">
+      </head>
+      <body>
+
+            <div class="site">
+                  <div class="entete_site">
+                         <header>
+                              <%- include('../partials/header.ejs'); %>
+                        </header>
+                  </div>
+            <div class="formulaire">
+                  
+            <h1 id="titre">Bienvenu chez DIANTABA</h1>
+             <form>
+                  <fieldset>
+                        <legend class="nombre">Inscription au compte</legend>
+                        <div class="mesinputs">
+                              <div class="c100">
+                                    <input type="radio" id="acteur" name="acteur" value="Acheteur">
+                                    <label for="acteur">Acheteur</label>  
+                                    
+                                    <input type="radio" id="acteur" name="acteur" value="Vendeur">
+                                    <label for="acteur">Vendeur</label> 
+                              </div>
+
+
+                              <div class="c100">
+                                    <label for="nom">Nom</label>
+                                    <input type="text" id="nom" name="nom" class="info">
+                              </div>
+
+                              <div class="c100">
+                                    <label for="nom">Prénom</label>
+                                    <input type="text" name="prenom" id="prenom" class="info"> 
+                              </div>
+                              
+                              <div class="c100">
+                                    <label for="mail">E-mail</label>
+                                    <input type="email" id="mail" name="mail" class="info">
+                              </div>
+                              
+                              <div class="c100">
+                                    <label for="mdp">Mot de passe</label>
+                                    <input type="password" name="password" id="password" class="info">
+                              </div>
+                              
+                              <div class="c100">
+                                    <label for="confimdp">Confirmation mot de passe</label> 
+                                    <input type="password" id="confirmpassword" name="confipassword" class="info">
+                              </div>
+                              
+                                        
+                              <div class="c100">
+                                    <input type="submit" value="Je fais mon inscription">
+                              </div>
+                  </div>  
+                  </fieldset>
+            </form> 
+            <footer>
+                  <%- include('../partials/footer.ejs'); %>
+            </footer>
+            </div>      
+      </body>
+</html
