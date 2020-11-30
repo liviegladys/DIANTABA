@@ -7,13 +7,12 @@ const sercetCode = "qhdsddhqGLADYSd;sjkjhfdfbhdf";
 module.exports = {
 
   signup(req, res, next) {
-    const regExpPassword = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{6,})/;
+   const regExpPassword = /^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{6,}$/;
     const user = new User({
       Nom: req.body.Nom,
       Prenom: req.body.Prenom,
       Mail: req.body.Mail,
       Password: req.body.Password,
-      
       statut: req.body.statut,
 
     });

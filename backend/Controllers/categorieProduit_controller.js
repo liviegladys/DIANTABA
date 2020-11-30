@@ -1,6 +1,6 @@
 //const Cat = require('../Models/categorieProduit_model');
 const bodyParser = require('body-parser');
-const { AddCategorieProduit } = require('../Controllers/prouduit_controller');
+const { AddCategorieProduit } = require('./produit_controller');
 const Cat = require('../Models/categorieProduit_model');
 
 

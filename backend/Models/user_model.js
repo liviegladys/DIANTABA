@@ -7,7 +7,7 @@ const userSchema = mongoose.Schema({// schema de données
     Prenom: { type: String, required: true },
     Mail: { type: String, required: true },
     Password:{type:String},
-    Statut:{type:String,enum:['particulier','professionnel']},
+    Statut:{type:String,enum:['particulier','professionnel','admin']},
     
 });
 

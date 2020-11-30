@@ -1,5 +1,6 @@
 const mongoose= require('mongoose');
 const Produit = require('../Models/produit_model');
+const produit_model=require('../Models/produit_model')
 
         module.exports = {
             createProduit(req,res,next){
@@ -19,9 +20,18 @@ const Produit = require('../Models/produit_model');
             .then(() => res.sendStatus(201).json({ message: 'produit créé !' }))
             .catch(error => res.sendStatus(400).json({ error }));
             },
+            async getAllProducts(req,res, next) {
+                const products= await produit_model.find({}).exec();
+                console.log(products)
 
-            
+                res.render('pages/product',{
+                       // products:products,// passer une variable dansle rendu de page
+                        message:"coucou"
+                       })
+               
+              }
 
+                
         
         };
 

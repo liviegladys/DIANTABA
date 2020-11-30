@@ -48,14 +48,17 @@ app.use((req, res, next) => {
         app.get('/profile', function(req, res) {
           res.render('pages/profile')}); 
 
-          app.get('/product', async function(req, res) {
+          app.get('/product', function(req, res) {
+            res.render('pages/product')}); 
+
+          // app.get('/product', async function(req, res) {
             
            //avant le rendu faire la connexion avec la BDD
 
-           //requete pour selectionner tous les produits ET LA STOCKE DANS UNE VARIABLE
+           //requete pour selectionner tous les produits ET LA STOCKEr DANS UNE VARIABLE
 
-           const products= await produit_model.find({}).exec();
-           console.log(products)
+          //  const products= await produit_model.find({}).exec();
+          //  console.log(products)
 
 // .then(() => res.sendStatus(201).render("page/product",{ message: 'voici tous vos produits' }))
 // .catch(error => res.sendStatus(400).json({ error }));
@@ -85,11 +88,11 @@ app.use((req, res, next) => {
             
             
             
-            res.render('pages/product',{
-              products:products,// passer une variable dansle rendu de page
-              message:"coucou"
-             })
-            }); 
+            // res.render('pages/product',{
+            //   products:products,// passer une variable dansle rendu de page
+            //   message:"coucou"
+            //  })
+            // }); 
 
 
 

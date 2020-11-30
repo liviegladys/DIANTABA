@@ -4,7 +4,7 @@ const auth = require('../middleware/auth'); // passer par le middleware pour s' 
 const multer=require('../middleware/multer_config')
 const userCtrl = require('../Controllers/user_Controller');
 const categorieProduitCtrl= require('../Controllers/categorieProduit_controller')
-const produitCtrl=require('../Controllers/prouduit_controller')
+const produitCtrl=require('../Controllers/produit_controller')
 const panierCtrl=require('../Controllers/panier_controller')
 
 router.post('/signup', userCtrl.signup);
@@ -15,6 +15,7 @@ router.get('/',userCtrl.home)
 
 router.post('/create',categorieProduitCtrl.create)
 router.post('/createProduct',produitCtrl.createProduit)
+router.get('/getAllProducts',produitCtrl.getAllProducts)
 
 // router.post('/createPanier',panierCtrl.createPanier)
 
