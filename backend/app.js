@@ -94,6 +94,12 @@ app.use((req, res, next) => {
             //  })
             // }); 
 
+             
+            app.get('/ajoutProduit', function(req, res) {
+              res.render('pages/ajoutProduit')}); 
+
+              
+
 
 
   app.use('/images', express.static(path.join(__dirname, 'images')));

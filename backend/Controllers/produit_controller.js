@@ -6,12 +6,12 @@ const produit_model=require('../Models/produit_model')
             createProduit(req,res,next){
             const produit_model = new Produit({// schema de données
                            
-    ProduitTitre: req.body.ProduitTitre,
-    ProduitPic: req.body.ProduitPic,
-    ProduitDescrip: req.body.ProduitDescrip,
-    ProduitRegion:req.body.ProduitRegion,
-    produitPrix: req.body.produitPrix,
-    categorie:req.body.categorie
+                ProduitTitre: req.body.ProduitTitre,
+                ProduitPic: req.body.ProduitPic,
+                ProduitDescrip: req.body.ProduitDescrip,
+                ProduitRegion:req.body.ProduitRegion,
+                produitPrix: req.body.produitPrix,
+                categorie:req.body.categorie
                 
             });
             console.log(req.body)
@@ -29,9 +29,7 @@ const produit_model=require('../Models/produit_model')
                         message:"coucou"
                        })
                
-              }
-
-                
+              } 
         
         };
 

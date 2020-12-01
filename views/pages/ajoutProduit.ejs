@@ -5,7 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajout</title>
 </head>
+<header>
+    <%- include('../partials/header.ejs'); %>
+</header>
 <body>
-    
+    <form enctype="multipart/form-data" name="ajoutproduit" action="" method="post">
+        <label for="idNomProuit">Nom Produit <span class="text-danger">*</span></label>
+        <input type="text" name="nom" id="idNomProuit">
+        <br><br>
+        
+        <label for="idDescriptionProd"> Description produit</label>
+        <input type="text" name="description produit" id="idDescriptionProd">
+        <br><br>
+        
+        <label for="idMagasin">Enseigne <span class="">*</span></label>
+        <input type="text" name="NomMagasin" id="idMagasin">
+        <br><br>
+        
+        <label for="idphoto">photo</label>
+        <input type="file" name="photo" id="idphoto">
+        <br><br>
+
+        <label for="idprix">prix</label>
+        <input type="number" name="prix" id="idprix">
+        <br><br>
+
+        <label for="idprixCasse">prix Cassé</label>
+        <input type="number" name="prixCasse" id="idprixCasse">
+        <br><br>
+        
+        <input type="submit" id="submit" name="valider" value="Ajouter Produit">
+        </form>
 </body>
+<footer>
+    <%- include('../partials/footer.ejs'); %>
+</footer>
 </html>
