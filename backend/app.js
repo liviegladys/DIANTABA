@@ -45,8 +45,8 @@ app.use((req, res, next) => {
       app.get('/inscription', function(req, res) {
         res.render('pages/inscription')}); 
 
-        app.get('/profile', function(req, res) {
-          res.render('pages/profile')}); 
+        app.get('/particulier', function(req, res) {
+          res.render('pages/particulier')}); 
 
           app.get('/product', function(req, res) {
             res.render('pages/product')}); 
