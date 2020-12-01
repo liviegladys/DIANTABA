@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+      <head>
+            <link rel="stylesheet" href="index.css">
+
+             <%- include('../partials/head.ejs'); %>
+      </head>
+      <body>
+      <div class="site">
+            <div class="entete_site">
+                   <header>
+                        <%- include('../partials/header.ejs'); %>
+                  </header>
+
+            </div>
+
+            <div class="navigation">
+                  
+                <div class="connexion_inscription"><a href="index.ejs">Accueil</a></div> 
+               <div class="connexion_inscription"><a href="ajoutProduit.ejs">Ajout Produits</a></div>
+                
+               <div class="connexion_inscription"><a href="MonStock.ejs">Stock</a></div> 
+               <div class="connexion_inscription"><a href="profile.ejs">Mon profile</a></div> 
+                   
+          </div>
+            <nav>
+                  <ul>
+                        <li class="deroulant" ><a href="#">Accueil</a>
+                             
+                        </li>
+                        <li class="deroulant" ><a href="#">Produits</a>
+                              <ul class="sous">
+                                    <li><a href="#">Fruits et legume</a></li>
+                                    <li><a href="#">Poisson et viande</a></li>
+                                    <li><a href="#">Produits laitiers</a></li>
+                                    <li><a href="#">surgelés</a></li>  
+                                    <li><a href="#">patisserie</a></li>
+                              </ul>
+                        </li>
+                  
+
+                       <li ><a href="#">Panier</a></li>
+                        <li ><a href="#">Profile</a></li>
+                        </ul>
+                        </nav>
+
+            <div class="photo1">
+                  <div class="petitephoto"><img src="DesFruits.jpg" width="250px"></div>
+                  <div class="petitephoto"><img src="Pomme.jpg"  width="250px"></div>
+                  <div class="petitephoto"><img src="Farise.jpg"  width="250px"></div>
+                  <div class="petitephoto"><img src="Pomme.jpg"  width="250px"></div>
+                  <div class="petitephoto"><img src="Farise.jpg"  width="250px"></div>
+            </div>
+
+
+      <div class="Enseignes">Les Enseignes qui nous suivent</div>
+            <div class="trois_photo">
+                             
+                  <div class="item">Auchan</div>
+                  <div class="item">Carrefour</div>
+                  <div class="item">Flunch</div>
+                  <div class="item">Mc Donalds</div>
+                  <div class="item">Boulagerie Sophie</div>
+                  <div class="item">Restaurant Le Brune</div>
+            </div>
+      
+            <footer>
+                  <%- include('../partials/footer.ejs'); %>
+            </footer>
+      </div>
+      </body>
+</html
