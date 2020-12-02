@@ -1,6 +1,7 @@
 const mongoose= require('mongoose');
 const Produit = require('../Models/produit_model');
 const produit_model=require('../Models/produit_model')
+const data=require('../Data/db')
 
         module.exports = {
             createProduit(req,res,next){
@@ -25,7 +26,7 @@ const produit_model=require('../Models/produit_model')
                 console.log(products)
 
                 res.render('pages/product',{
-                       // products:products,// passer une variable dansle rendu de page
+                        products:products,// passer une variable dansle rendu de page
                         message:"coucou"
                        })
                

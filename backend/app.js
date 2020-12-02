@@ -1,5 +1,5 @@
 const express = require('express');
-const bodyParser= require('body-parser')
+const bodyParser= require('body-parser')// permet de découper la requete qu on reçoit en front
 const mongoose = require('mongoose');
 const app = express();
 const path = require('path');
@@ -9,17 +9,6 @@ app.use(express.static("public"))
 
 const routRoutes=require('./routes/rout');
 const { Console } = require('console');
-
-mongoose.connect('mongodb+srv://DIANTABA:simplon2020@cluster0.5wnmq.mongodb.net/DIANTABA?retryWrites=true&w=majority',// connexion à la base de donnée
-  { useNewUrlParser: true,
-    useUnifiedTopology: true })
- 
-    mongoose.connection.once('open',()=>{
-        console.log('connexion établie')
-    })
-.on('error',(error)=>{
-    console.log('connexion echouée' + error)
-})
 
 app.set('view engine','ejs')// declare que le moteur de rendu c' est ejs et ceci se met avant toute route
 app.use(express.static('views/pages'))// les fichiers.ejs vont etre recuperer dans le dossier views
@@ -35,30 +24,28 @@ app.use((req, res, next) => {
 
   app.use('/api', routRoutes);
   
-  app.get('/', function(req, res) {
-    res.render('pages/index')});
+  // app.get('/', function(req, res) {
+  //   res.render('pages/index')});
 
-   app.get('/connexion', function(req, res) {
-      res.render('pages/connexion')});
+  //  app.get('/connexion', function(req, res) {
+  //     res.render('pages/connexion')});
 
 
-      app.get('/inscription', function(req, res) {
-        res.render('pages/inscription')}); 
+       
+  //       app.get('/particulier', function(req, res) {
+  //         res.render('pages/particulier')}); 
 
-        app.get('/particulier', function(req, res) {
-          res.render('pages/particulier')}); 
+          // app.get('/product', function(req, res) {
+          //   res.render('pages/product')}); 
 
-          app.get('/product', function(req, res) {
-            res.render('pages/product')}); 
-
-          // app.get('/product', async function(req, res) {
+          //  app.get('/product', async function(req, res) {
             
            //avant le rendu faire la connexion avec la BDD
 
            //requete pour selectionner tous les produits ET LA STOCKEr DANS UNE VARIABLE
 
-          //  const products= await produit_model.find({}).exec();
-          //  console.log(products)
+            // const products= await produit_model.find({}).exec();
+            // console.log(products)
 
 // .then(() => res.sendStatus(201).render("page/product",{ message: 'voici tous vos produits' }))
 // .catch(error => res.sendStatus(400).json({ error }));
@@ -107,5 +94,4 @@ app.use((req, res, next) => {
 
 
  
-  module.exports = app;
-  
+  module.exports = app;  

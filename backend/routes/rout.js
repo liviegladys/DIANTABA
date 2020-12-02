@@ -17,6 +17,36 @@ router.post('/create',categorieProduitCtrl.create)
 router.post('/createProduct',produitCtrl.createProduit)
 router.get('/getAllProducts',produitCtrl.getAllProducts)
 
+
+router.get('/inscription', function(req, res) {
+        res.render('pages/inscription')});
+
+router.get('/connexion', function(req, res) {
+        res.render('pages/connexion')});
+
+router.get('/index', function(req, res) {
+        res.render('pages/index')});
+
+router.get('/ajoutProduit', function(req, res) {
+        res.render('pages/ajoutProduit')});
+
+router.get('/modifierProduit', function(req, res) {
+        res.render('pages/modifierProduit')});
+
+ router.get('/deleteProduit', function(req, res) {
+        res.render('pages/deleteProduit')});
+
+
+ router.get('/particulier', function(req, res) {
+        res.render('pages/particulier')}); 
+
+router.get('/product', function(req, res) {
+    res.render('pages/product')}); 
+
+router.get('/product', function(req, res) {
+    res.render('pages/product')}); 
+
+
 // router.post('/createPanier',panierCtrl.createPanier)
 
 
