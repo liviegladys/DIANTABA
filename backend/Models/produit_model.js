@@ -11,8 +11,6 @@ const ProduitSchema = mongoose.Schema({
     produitPrix: { type: Number },
     categorie: { type: mongoose.Schema.Types.ObjectId, ref: 'cat' },
 
-   
-
 });
 
 module.exports = mongoose.model('Produit_model', ProduitSchema);

@@ -1,36 +1,35 @@
+const url="http://localhost:3060/api/ajoutProduit";
 
 
-const URL="http://localhost:3060/ajoutProduit";
 
-const ajout=()=>{
-  console.log(document.querySelector(''))
-    document.getElementById("submit").addEventListener('click',()=>{
-        let form = document.getElementById("ajoutProduit");
-
-        let formData = new FormData(form);
-        const config = {
-            method: 'POST',
-            headers: {
-            "Access-Control-Allow-Origin":"http://localhost:3060/ajoutProduit"
+  document.querySelector('#formAddProduct').addEventListener('submit',(e)=>{
+      e.preventDefault();
+      const config = {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
         },
-        body: formData,
-    }
-    fetch(URL, config)
-    .then(response => response.json().then((response)=>{
-        if(response=="OK" )
-        {
-            document.location.href="../../Views/pages/ajoutProduit"
-        }
-        else{
-            console.log(response)
-        }
-    })
+        body: JSON.stringify({
+          ProduitTitre: document.querySelector("#idNomProduit").value,
+          ProduitPic: document.querySelector("#idphoto").value,
+          ProduitDescrip: document.querySelector("#idDescriptionProd").value,
+          ProduitRegion: document.querySelector("#idRegion").value,
+          ProduitPrix: document.querySelector("#idprix").value,
+          categorie: document.querySelector("#idCategorie").value
+        }),
+      
+      };
+      fetch(url,config)
+      .then(()=>{
+        console.log('merci de me l envoyer en BD')
+      })
+     .catch((err)=>{
+       console.error(err)
+     })
+  })
 
-    )
-})
-}
 
-export default ajout
 
 
 

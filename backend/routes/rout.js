@@ -29,22 +29,23 @@ router.get('/index', function(req, res) {
 
 router.get('/ajoutProduit', function(req, res) {
         res.render('pages/ajoutProduit')});
+router.post('/ajoutProduit',produitCtrl.createProduit)
 
 router.get('/modifierProduit', function(req, res) {
         res.render('pages/modifierProduit')});
 
- router.get('/deleteProduit', function(req, res) {
+router.post('/modifierProduit',produitCtrl.modifyProduit)
+
+router.get('/deleteProduit', function(req, res) {
         res.render('pages/deleteProduit')});
 
 
  router.get('/particulier', function(req, res) {
         res.render('pages/particulier')}); 
 
-router.get('/product', function(req, res) {
-    res.render('pages/product')}); 
+router.get('/product',produitCtrl.getAllProducts)
 
-router.get('/product', function(req, res) {
-    res.render('pages/product')}); 
+
 
 
 // router.post('/createPanier',panierCtrl.createPanier)

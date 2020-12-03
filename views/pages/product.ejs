@@ -16,13 +16,13 @@
     <thead>
       <tr>
         <th>Titre Produit</th>
-        <th>Prix produit</th>
-        <th>Description produit</th>
         <th>Photo produit</th>
-        <th>Région produit</th>
+        <th>Description produit</th>
+        <th>Region Produit</th>
+        <th>Prix produit</th>
         <th>Categorie produit</th>
         <th class="d-print-none">
-          <a class="btn btn-sm btn-success" href="/create">Ajouter</a>
+          <a class="btn btn-sm btn-success" href="http://localhost:3060/api/ajoutProduit">Ajouter</a>
         </th>
       </tr>
     </thead>
@@ -30,13 +30,13 @@
         <% products.forEach(function(product){ %>
         <tr>
           <td><%= product.ProduitTitre%></td>
-          <td><%=product.produitPrix %></td>
-          <td><%= product.ProduitDescrip %></td>
           <td><img src="/images/<%-product.ProduitPic %> " alt="<%- product.ProduitTitre %>"></td>
+          <td><%= product.ProduitDescrip %></td>
           <td><%= product.ProduitRegion %></td>
+          <td><%=product.produitPrix %></td>
           <td><%= product.categorie %></td>
           <td class="d-print-none">
-            <a class="btn btn-sm btn-warning" href="/edit/<%= product.produit_ID %>">Modifier</a>
+            <a class="btn btn-sm btn-warning" href="/api/modifierProduit/<%= product.produit_ID %>">Modifier</a>
             <a class="btn btn-sm btn-danger" href="/delete/<%= product.Produit_ID %>">Effacer</a>
           </td>
         </tr>

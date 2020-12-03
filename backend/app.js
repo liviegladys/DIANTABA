@@ -12,6 +12,8 @@ const { Console } = require('console');
 
 app.set('view engine','ejs')// declare que le moteur de rendu c' est ejs et ceci se met avant toute route
 app.use(express.static('views/pages'))// les fichiers.ejs vont etre recuperer dans le dossier views
+app.use(bodyParser.json());
+
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -20,7 +22,6 @@ app.use((req, res, next) => {
     next();
   });
 
-  app.use(bodyParser.json());
 
   app.use('/api', routRoutes);
   

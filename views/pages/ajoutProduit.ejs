@@ -4,37 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajout</title>
+    <script src="../js/addProduct.js" defer></script>
 </head>
 <header>
     <%- include('../partials/header.ejs'); %>
 </header>
 <body>
-    <form enctype="multipart/form-data" name="ajoutproduit" action="" method="post"  href="http://localhost:3060/api/createProduit">
+    <form enctype="multipart/form-data" name="ajoutproduit" id="formAddProduct">
         <label for="idNomProuit">Nom Produit <span class="text-danger">*</span></label>
-        <input type="text" name="nom" id="idNomProuit">
+        <input type="text" name="nom" id="idNomProduit">
         <br><br>
-        
-        <label for="idDescriptionProd"> Description produit</label>
-        <input type="text" name="description produit" id="idDescriptionProd">
-        <br><br>
-        
-        <label for="idMagasin">Enseigne <span class="">*</span></label>
-        <input type="text" name="NomMagasin" id="idMagasin">
-        <br><br>
-        
+
         <label for="idphoto">photo</label>
         <input type="file" name="photo" id="idphoto">
         <br><br>
+
+        <label for="idDescriptionProd"> Description produit</label>
+        <input type="text" name="description produit" id="idDescriptionProd">
+        <br><br>
+
+        <label for="idRegion">Region</label>
+        <input type="text" name="Region" id="idRegion">
+        <br><br>
+        
+        
 
         <label for="idprix">prix</label>
         <input type="number" name="prix" id="idprix">
         <br><br>
 
-        <label for="idprixCasse">prix Cassé</label>
-        <input type="number" name="prixCasse" id="idprixCasse">
+        <label for="idCategorie">categorie</label>
+        <input type="text" name="categorie" id="idCategorie">
         <br><br>
+
         
-        <input type="submit" id="submit" name="valider" value="Ajouter Produit">
+        
+        <button type="submit" id="submit" name="valider">Envoyé</button>
         </form>
 </body>
 <footer>
