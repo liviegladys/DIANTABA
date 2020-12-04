@@ -4,5 +4,42 @@
       height: auto;
 }
 body{
-background: red;
+margin: 0px;
+padding: 0px;
+background-image:url('../images/pageacceuil.jpg');
+background-size:100%;
+background-repeat:no-repeat 
+}
+
+.section{   
+width: 100%;
+height:650px;
+background-image:url('../images/pageacceuil.jpg');
+background-size:cover;
+position: relative;
+overflow:hidden;
+ 
+}
+
+.overlay{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background: rgba(0,0,255,7);
+}
+
+.nav-bg{
+      background: black;
+      height: 80px;
+      
+}
+
+.a:hover{
+      color: white;
+}
+
+.nav-link{
+      color: white;
 }
