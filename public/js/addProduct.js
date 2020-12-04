@@ -13,10 +13,10 @@ const url="http://localhost:3060/api/ajoutProduit";
         body: JSON.stringify({
           ProduitTitre: document.querySelector("#idNomProduit").value,
           ProduitPic: document.querySelector("#idphoto").value,
-          ProduitDescrip: document.querySelector("#idDescriptionProd").value,
+         ProduitDescrip: document.querySelector("#idDescriptionProd").value,
           ProduitRegion: document.querySelector("#idRegion").value,
           ProduitPrix: document.querySelector("#idprix").value,
-          categorie: document.querySelector("#idCategorie").value
+          categorie: document.querySelector("#idCategorie").value 
         }),
       
       };
