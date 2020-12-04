@@ -9,6 +9,7 @@ const url="http://localhost:3060/api/ajoutProduit";
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
+          
         },
         body: JSON.stringify({
           ProduitTitre: document.querySelector("#idNomProduit").value,
