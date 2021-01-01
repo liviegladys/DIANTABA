@@ -8,18 +8,22 @@ const produitCtrl=require('../Controllers/produit_controller')
 const panierCtrl=require('../Controllers/panier_controller')
 
 router.post('/signup', userCtrl.signup);
-router.post('/findAndLog', userCtrl.findAndLog);
-router.get('/getUsers',userCtrl.getUsers),
-router.post('/delete', userCtrl.deleteuser);
-router.get('/',userCtrl.home)
+// router.post('/findAndLog', userCtrl.findAndLog);
+// router.get('/getUsers',userCtrl.getUsers),
+// router.post('/delete', userCtrl.deleteuser);
+// router.get('/',userCtrl.home)
+router.get('/findAll', userCtrl.findAll);
+router.get('/findOne/:id', userCtrl.findOne);
+router.put('/update/:id', userCtrl.update);
+router.post('/delete/:id', userCtrl.delete);
 
 router.post('/create',categorieProduitCtrl.create)
 router.post('/createProduct',produitCtrl.createProduit)
 router.get('/getAllProducts',produitCtrl.getAllProducts)
 
 
-router.get('/inscription', function(req, res) {
-        res.render('pages/inscription')});
+router.get('/inscriptionParticulier', function(req, res) {
+        res.render('pages/inscriptionParticulier')});
 
 router.get('/connexion', function(req, res) {
         res.render('pages/connexion')});

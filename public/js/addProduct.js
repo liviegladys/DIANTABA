@@ -9,15 +9,16 @@ const url="http://localhost:3060/api/ajoutProduit";
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
+            
           
         },
         body: JSON.stringify({
-          ProduitTitre: document.querySelector("#idNomProduit").value,
-          ProduitPic: document.querySelector("#idphoto").value,
-          ProduitDescrip: document.querySelector("#idDescriptionProd").value,
-          ProduitRegion: document.querySelector("#idRegion").value,
-          ProduitPrix: document.querySelector("#idprix").value,
-          categorie: document.querySelector("#idCategorie").value 
+          ProduitTitre: document.querySelector("#NomProduit").value,
+          ProduitPic: document.querySelector("#photo").value,
+          ProduitDescrip: document.querySelector("#DescriptionProd").value,
+          ProduitRegion: document.querySelector("#Region").value,
+          ProduitPrix: document.querySelector("#prix").value,
+          categorie: document.querySelector("#Categorie").value 
         }),
       
       };
@@ -28,8 +29,8 @@ const url="http://localhost:3060/api/ajoutProduit";
      .catch((err)=>{
        console.error(err)
      })
-  })
-
+   })
+  
 
 
 
